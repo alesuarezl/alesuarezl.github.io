@@ -1211,6 +1211,15 @@ body::before {
     .section-title {
         font-size: 1.2rem;
     }
+
+    .character-header {
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .scroll-hint {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
