@@ -35,9 +35,9 @@
     --bg-card-hover: #1a1a1a;
 
     /* Texto sobre fondo oscuro */
-    --text-light: #e0e0e0;
-    --text-muted: #a0a0a0;
-    --text-faded: #606060;
+    --text-light: #f0f0f0;
+    --text-muted: #c0c0c0;
+    --text-faded: #808080;
 
     /* Bordes */
     --border-dark: #2a2a2a;
@@ -189,7 +189,8 @@ body::before {
     font-family: var(--font-heading);
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: var(--transition);
@@ -299,7 +300,8 @@ body::before {
 .header-attributes .attr-modifier {
     display: inline-block;
     font-family: var(--font-heading);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--green);
     margin-top: 0.15rem;
     padding: 0.15rem 0.4rem;
@@ -310,7 +312,8 @@ body::before {
 .header-attributes .attr-name {
     display: block;
     font-family: var(--font-heading);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
     color: var(--violet-light);
     margin-top: 0.5rem;
     text-transform: uppercase;
@@ -319,8 +322,8 @@ body::before {
 
 .header-attributes .attr-full {
     display: block;
-    font-size: 0.55rem;
-    color: var(--text-faded);
+    font-size: 0.65rem;
+    color: var(--text-muted);
     margin-top: 0.15rem;
 }
 
@@ -466,8 +469,9 @@ body::before {
 
 .detail-label {
     font-family: var(--font-heading);
-    font-size: 0.7rem;
-    color: var(--text-faded);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     min-width: 120px;
@@ -475,7 +479,7 @@ body::before {
 
 .detail-value {
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-light);
 }
 
@@ -492,7 +496,8 @@ body::before {
     gap: 0.75rem;
     padding: 0.875rem 1.75rem;
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -579,7 +584,8 @@ body::before {
 
 .block-title {
     font-family: var(--font-heading);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -622,7 +628,8 @@ body::before {
 .combat-label {
     font-family: var(--font-body);
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 /* Traits */
@@ -648,7 +655,7 @@ body::before {
 }
 
 .trait span {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-light);
 }
 
@@ -731,7 +738,8 @@ body::before {
 .ideal-label {
     display: block;
     font-family: var(--font-heading);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
     color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -741,8 +749,8 @@ body::before {
 .ideal-value {
     font-family: var(--font-body);
     font-style: italic;
-    color: var(--text-muted);
-    font-size: 0.95rem;
+    color: var(--text-light);
+    font-size: 1rem;
 }
 
 /* ============================================
@@ -796,15 +804,16 @@ body::before {
 
 .prof-header h3 {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--parchment);
     letter-spacing: 0.05em;
 }
 
 .prof-subtitle {
     font-family: var(--font-body);
-    font-size: 0.8rem;
-    color: var(--text-faded);
+    font-size: 0.85rem;
+    color: var(--text-muted);
     font-style: italic;
     margin-left: auto;
 }
@@ -820,8 +829,8 @@ body::before {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    font-size: 1rem;
+    color: var(--text-light);
     padding: 0.4rem 0;
     transition: var(--transition);
 }
@@ -878,7 +887,8 @@ body::before {
     top: 1rem;
     right: 1rem;
     font-family: var(--font-heading);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.3rem 0.75rem;
@@ -910,15 +920,16 @@ body::before {
 
 .quest-title {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--parchment);
     margin-bottom: 0.75rem;
     letter-spacing: 0.02em;
 }
 
 .quest-description {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+    font-size: 1rem;
+    color: var(--text-light);
     line-height: 1.7;
     margin-bottom: 1rem;
 }
@@ -929,8 +940,9 @@ body::before {
 
 .reward-label {
     font-family: var(--font-heading);
-    font-size: 0.65rem;
-    color: var(--text-faded);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     display: block;
@@ -944,11 +956,11 @@ body::before {
 }
 
 .reward-tag {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     padding: 0.25rem 0.6rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--text-faded);
-    color: var(--text-muted);
+    color: var(--text-light);
     font-family: var(--font-body);
 }
 
@@ -991,8 +1003,8 @@ body::before {
 }
 
 .contact-intro {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    font-size: 1.15rem;
+    color: var(--text-light);
     font-style: italic;
     margin-bottom: 2.5rem;
     line-height: 1.8;
@@ -1028,15 +1040,16 @@ body::before {
 
 .contact-label {
     font-family: var(--font-heading);
-    font-size: 0.65rem;
-    color: var(--text-faded);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 .contact-value {
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-light);
 }
 
