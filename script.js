@@ -220,21 +220,23 @@ document.querySelectorAll('.proficiency-block').forEach(block => {
 
 
 // ============================================
-// Parallax Effect for Header (sutil)
+// Parallax Effect for Header (sutil) - Solo en desktop
 // ============================================
 const characterHeader = document.querySelector('.character-header');
 const headerContent = document.querySelector('.header-content');
 
-if (characterHeader && headerContent) {
+if (characterHeader && headerContent && window.innerWidth > 768) {
     window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const headerHeight = characterHeader.offsetHeight;
+        if (window.innerWidth > 768) {
+            const scrolled = window.pageYOffset;
+            const headerHeight = characterHeader.offsetHeight;
 
-        if (scrolled < headerHeight) {
-            const opacity = 1 - (scrolled / headerHeight) * 0.5;
-            const translateY = scrolled * 0.2;
-            headerContent.style.opacity = opacity;
-            headerContent.style.transform = `translateY(${translateY}px)`;
+            if (scrolled < headerHeight) {
+                const opacity = 1 - (scrolled / headerHeight) * 0.5;
+                const translateY = scrolled * 0.2;
+                headerContent.style.opacity = opacity;
+                headerContent.style.transform = `translateY(${translateY}px)`;
+            }
         }
     });
 }
