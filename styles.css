@@ -464,7 +464,7 @@ body {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    min-width: 130px;
+    min-width: 150px;
     flex-shrink: 0;
 }
 
