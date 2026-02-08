@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Shield filled with green, key as cutout -->
+  <defs>
+    <mask id="keyMask">
+      <rect width="32" height="32" fill="white"/>
+      <!-- Key cutout -->
+      <circle cx="16" cy="11" r="4" fill="black"/>
+      <rect x="14" y="14" width="4" height="10" fill="black"/>
+      <rect x="18" y="18" width="3" height="2.5" fill="black"/>
+      <rect x="18" y="22" width="2.5" height="2.5" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Shield filled with key cutout -->
+  <path d="M16 2 L28 6 L28 15 C28 22.5 22.5 28 16 30 C9.5 28 4 22.5 4 15 L4 6 Z"
+        fill="#2ecc71"
+        mask="url(#keyMask)"/>
+</svg>

@@ -319,42 +319,47 @@ body {
 .portrait-frame {
     width: 200px;
     height: 200px;
-    border: 3px solid var(--green);
+    border: 4px solid var(--bg-darker);
     position: relative;
     background: var(--bg-card);
     transition: var(--transition);
+    box-shadow:
+        0 0 0 2px var(--green),
+        0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .portrait-frame:hover {
-    border-color: var(--green);
-    box-shadow: 0 0 30px rgba(46, 204, 113, 0.5), 0 0 60px rgba(46, 204, 113, 0.2);
+    box-shadow:
+        0 0 0 2px var(--green),
+        0 0 30px rgba(46, 204, 113, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .portrait-frame::before,
 .portrait-frame::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--green);
+    width: 25px;
+    height: 25px;
+    border: 3px solid var(--green);
     transition: var(--transition);
 }
 
 .portrait-frame:hover::before,
 .portrait-frame:hover::after {
-    border-color: var(--green);
+    border-color: var(--green-light);
 }
 
 .portrait-frame::before {
-    top: -8px;
-    left: -8px;
+    top: -10px;
+    left: -10px;
     border-right: none;
     border-bottom: none;
 }
 
 .portrait-frame::after {
-    bottom: -8px;
-    right: -8px;
+    bottom: -10px;
+    right: -10px;
     border-left: none;
     border-top: none;
 }
