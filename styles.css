@@ -509,6 +509,42 @@ body {
     color: var(--bg-dark);
 }
 
+/* Header Stats */
+.header-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-dark);
+}
+
+.header-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-stat i {
+    font-size: 1.25rem;
+    color: var(--green);
+}
+
+.header-stat .stat-value {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--parchment);
+}
+
+.header-stat .stat-label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.character-info .header-actions {
+    margin-top: 1.5rem;
+}
+
 /* Scroll hint */
 .scroll-hint {
     position: absolute;
@@ -535,7 +571,7 @@ body {
    Stats Section - Bloque de Estadísticas
    ============================================ */
 .stats-section {
-    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
 }
 
 .stats-grid {
