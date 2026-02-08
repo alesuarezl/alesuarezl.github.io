@@ -50,7 +50,7 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 50) {
-        navbar.style.borderBottomColor = 'rgba(184, 134, 11, 0.3)';
+        navbar.style.borderBottomColor = 'rgba(155, 89, 182, 0.3)';
     } else {
         navbar.style.borderBottomColor = 'var(--border-dark)';
     }

@@ -12,19 +12,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+    <!-- Language Toggle Button -->
+    <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" title="Cambiar a Español">ES</button>
+
     <!-- Minimalist Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#top" class="nav-logo">
                 <span class="logo-icon">⚔</span>
-                <span>Character Sheet</span>
+                <span data-i18n="nav.characterSheet">Character Sheet</span>
             </a>
             <ul class="nav-menu">
-                <li><a href="#background" class="nav-link">Background</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#proficiencies" class="nav-link">Proficiencies</a></li>
-                <li><a href="#quests" class="nav-link">Quests</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#background" class="nav-link" data-i18n="nav.background">Background</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+                <li><a href="#proficiencies" class="nav-link" data-i18n="nav.proficiencies">Proficiencies</a></li>
+                <li><a href="#quests" class="nav-link" data-i18n="nav.quests">Quests</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -91,21 +94,21 @@
                 <div class="name-plate">
                     <h1 class="character-name">Alejandro Suárez Lamadrid</h1>
                     <div class="title-divider"></div>
-                    <p class="character-title">Guardian of Digital Identities</p>
+                    <p class="character-title" data-i18n="header.title">Guardian of Digital Identities</p>
                 </div>
 
                 <div class="character-details">
                     <div class="detail-row">
-                        <span class="detail-label">Class</span>
-                        <span class="detail-value">Telecommunications + Cybersecurity Engineer</span>
+                        <span class="detail-label" data-i18n="header.classLabel">Class</span>
+                        <span class="detail-value" data-i18n="header.class">Telecommunications + Cybersecurity Engineer</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label">Specialization</span>
-                        <span class="detail-value">Identity & Access Management</span>
+                        <span class="detail-label" data-i18n="header.specializationLabel">Specialization</span>
+                        <span class="detail-value" data-i18n="header.specialization">Identity & Access Management</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label">Alignment</span>
-                        <span class="detail-value">Lawful Neutral</span>
+                        <span class="detail-label" data-i18n="header.alignmentLabel">Alignment</span>
+                        <span class="detail-value" data-i18n="header.alignment">Lawful Neutral</span>
                     </div>
                 </div>
 
@@ -113,30 +116,30 @@
                     <div class="header-stat">
                         <i class="fas fa-hourglass-half"></i>
                         <span class="stat-value">7+</span>
-                        <span class="stat-label">Years in Industry</span>
+                        <span class="stat-label" data-i18n="header.yearsLabel">Years in Industry</span>
                     </div>
                     <div class="header-stat">
                         <i class="fas fa-toolbox"></i>
                         <span class="stat-value">10+</span>
-                        <span class="stat-label">IAM Technologies</span>
+                        <span class="stat-label" data-i18n="header.techLabel">IAM Technologies</span>
                     </div>
                 </div>
 
                 <div class="header-actions">
                     <a href="#quests" class="btn-parchment">
                         <i class="fas fa-scroll"></i>
-                        View Quests
+                        <span data-i18n="header.viewQuests">View Quests</span>
                     </a>
                     <a href="#contact" class="btn-parchment btn-secondary">
                         <i class="fas fa-feather-pointed"></i>
-                        Contact
+                        <span data-i18n="header.contact">Contact</span>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="scroll-hint">
-            <span>Scroll down to see more</span>
+            <span data-i18n="header.scrollHint">Scroll down to see more</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </header>
@@ -146,7 +149,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="header-decoration left"></div>
-                <h2 class="section-title">Background</h2>
+                <h2 class="section-title" data-i18n="section.background">Background</h2>
                 <div class="header-decoration right"></div>
             </div>
 
@@ -158,18 +161,18 @@
                     <div class="parchment-corner br"></div>
 
                     <div class="background-text">
-                        <p class="first-paragraph">
+                        <p class="first-paragraph" data-i18n="background.p1">
                             <span class="drop-cap">F</span>orged in the ancient arts of <strong>Telecommunications Engineering</strong>,
                             this guardian has dedicated their existence to protecting digital realms from the forces of chaos.
                             Their mastery of <strong>Identity & Access Management (IAM)</strong> allows them to safeguard the lifecycle
                             of digital identities in this vast and perilous world.
                         </p>
-                        <p>
+                        <p data-i18n="background.p2">
                             Their magic extends through both the <strong>celestial Cloud realms</strong> and the
                             <strong>earthly On-Premise fortresses</strong>, weaving enchantments of authentication,
                             authorization, and identity governance under the most sacred protection standards.
                         </p>
-                        <p>
+                        <p data-i18n="background.p3">
                             Driven by an <strong>obsessive quest for automation</strong>, this guardian seeks to eliminate repetitive toil
                             through the arcane power of scripting and orchestration, freeing mortals from mundane labor and allowing them to
                             focus on more strategic endeavors. Every manual task discovered is seen as a challenge to be conquered.
@@ -178,16 +181,16 @@
 
                     <div class="background-ideals">
                         <div class="ideal">
-                            <span class="ideal-label">Ideal</span>
-                            <span class="ideal-value">Protect the identity of every digital soul</span>
+                            <span class="ideal-label" data-i18n="background.idealLabel">Ideal</span>
+                            <span class="ideal-value" data-i18n="background.idealValue">Protect the identity of every digital soul</span>
                         </div>
                         <div class="ideal">
-                            <span class="ideal-label">Bond</span>
-                            <span class="ideal-value">The realm's security above all else</span>
+                            <span class="ideal-label" data-i18n="background.bondLabel">Bond</span>
+                            <span class="ideal-value" data-i18n="background.bondValue">The realm's security above all else</span>
                         </div>
                         <div class="ideal">
-                            <span class="ideal-label">Flaw</span>
-                            <span class="ideal-value">Perfectionist to the point of obsession</span>
+                            <span class="ideal-label" data-i18n="background.flawLabel">Flaw</span>
+                            <span class="ideal-value" data-i18n="background.flawValue">Perfectionist to the point of obsession</span>
                         </div>
                     </div>
                 </div>
@@ -200,7 +203,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="header-decoration left"></div>
-                <h2 class="section-title">Education</h2>
+                <h2 class="section-title" data-i18n="section.education">Education</h2>
                 <div class="header-decoration right"></div>
             </div>
 
@@ -216,9 +219,9 @@
                             <span class="education-dates">2019 - 2020</span>
                         </div>
                     </div>
-                    <h3 class="education-title">Master's Degree in Cybersecurity</h3>
+                    <h3 class="education-title" data-i18n="edu.master">Master's Degree in Cybersecurity</h3>
                     <ul class="education-details">
-                        <li><i class="fas fa-star"></i> Distinction in Master's Thesis CNN-based network intrusion detection over encrypted traffic</li>
+                        <li><i class="fas fa-star"></i> <span data-i18n="edu.masterDetail">Distinction in Master's Thesis CNN-based network intrusion detection over encrypted traffic</span></li>
                     </ul>
                 </article>
 
@@ -233,10 +236,10 @@
                             <span class="education-dates">2013 - 2018</span>
                         </div>
                     </div>
-                    <h3 class="education-title">Telecommunications Engineering</h3>
+                    <h3 class="education-title" data-i18n="edu.bachelor">Telecommunications Engineering</h3>
                     <ul class="education-details">
-                        <li><i class="fas fa-star"></i> Distinction in Network Protocols</li>
-                        <li><i class="fas fa-star"></i> Distinction in Bachelor's Thesis: Deep Learning for histological images</li>
+                        <li><i class="fas fa-star"></i> <span data-i18n="edu.bachelorDetail1">Distinction in Network Protocols</span></li>
+                        <li><i class="fas fa-star"></i> <span data-i18n="edu.bachelorDetail2">Distinction in Bachelor's Thesis: Deep Learning for histological images</span></li>
                     </ul>
                 </article>
             </div>
@@ -248,7 +251,7 @@
         <div class="container">
             <div class="section-header">
                 <div class="header-decoration left"></div>
-                <h2 class="section-title">Proficiencies</h2>
+                <h2 class="section-title" data-i18n="section.proficiencies">Proficiencies</h2>
                 <div class="header-decoration right"></div>
             </div>
 
@@ -257,13 +260,13 @@
                 <div class="proficiency-block">
                     <div class="prof-header">
                         <i class="fas fa-star"></i>
-                        <h3>Core Abilities</h3>
-                        <span class="prof-subtitle">Main Skills</span>
+                        <h3 data-i18n="prof.coreAbilities">Core Abilities</h3>
+                        <span class="prof-subtitle" data-i18n="prof.mainSkills">Main Skills</span>
                     </div>
                     <ul class="prof-list">
-                        <li class="proficient"><span class="prof-dot"></span>IAM</li>
-                        <li class="proficient"><span class="prof-dot"></span>Cybersecurity</li>
-                        <li class="proficient"><span class="prof-dot"></span>Software Development</li>
+                        <li class="proficient"><span class="prof-dot"></span><span data-i18n="prof.iam">IAM</span></li>
+                        <li class="proficient"><span class="prof-dot"></span><span data-i18n="prof.cybersecurity">Cybersecurity</span></li>
+                        <li class="proficient"><span class="prof-dot"></span><span data-i18n="prof.softwareDev">Software Development</span></li>
                     </ul>
                 </div>
 
@@ -271,8 +274,8 @@
                 <div class="proficiency-block">
                     <div class="prof-header">
                         <i class="fas fa-key"></i>
-                        <h3>Identity Magic</h3>
-                        <span class="prof-subtitle">IAM / PAM / SSO</span>
+                        <h3 data-i18n="prof.identityMagic">Identity Magic</h3>
+                        <span class="prof-subtitle" data-i18n="prof.iamPamSso">IAM / PAM / SSO</span>
                     </div>
                     <ul class="prof-list">
                         <li class="proficient"><span class="prof-dot"></span>SailPoint IIQ / ISC</li>
@@ -288,8 +291,8 @@
                 <div class="proficiency-block">
                     <div class="prof-header">
                         <i class="fas fa-cloud"></i>
-                        <h3>Celestial Realm</h3>
-                        <span class="prof-subtitle">AWS Cloud</span>
+                        <h3 data-i18n="prof.celestialRealm">Celestial Realm</h3>
+                        <span class="prof-subtitle" data-i18n="prof.awsCloud">AWS Cloud</span>
                     </div>
                     <ul class="prof-list">
                         <li class="proficient"><span class="prof-dot"></span>EC2 / Elastic Beanstalk</li>
@@ -304,8 +307,8 @@
                 <div class="proficiency-block">
                     <div class="prof-header">
                         <i class="fas fa-code"></i>
-                        <h3>Arcane Scripts</h3>
-                        <span class="prof-subtitle">Development</span>
+                        <h3 data-i18n="prof.arcaneScripts">Arcane Scripts</h3>
+                        <span class="prof-subtitle" data-i18n="prof.development">Development</span>
                     </div>
                     <ul class="prof-list">
                         <li class="proficient"><span class="prof-dot"></span>Java / Python</li>
@@ -324,30 +327,30 @@
         <div class="container">
             <div class="section-header">
                 <div class="header-decoration left"></div>
-                <h2 class="section-title">Quest Log</h2>
+                <h2 class="section-title" data-i18n="section.quests">Quest Log</h2>
                 <div class="header-decoration right"></div>
             </div>
 
             <div class="quests-grid">
                 <!-- Quest 1 - iC Consult -->
                 <article class="quest-card">
-                    <div class="quest-status in-progress">In Progress</div>
+                    <div class="quest-status in-progress" data-i18n="quest.inProgress">In Progress</div>
                     <div class="quest-header">
                         <div class="quest-icon">
                             <i class="fas fa-cloud"></i>
                         </div>
                         <div class="quest-meta">
                             <span class="quest-company">iC Consult</span>
-                            <span class="quest-dates">Aug 2025 - Present</span>
+                            <span class="quest-dates">Aug 2025 - <span data-i18n="quest.present">Present</span></span>
                         </div>
                     </div>
-                    <h3 class="quest-title">The Cloud Identity Architects</h3>
-                    <p class="quest-description">
+                    <h3 class="quest-title" data-i18n="quest1.title">The Cloud Identity Architects</h3>
+                    <p class="quest-description" data-i18n="quest1.description">
                         Joining an elite guild of identity sorcerers, implementing and customizing
                         SailPoint Identity Security Cloud instances across multiple realms.
                     </p>
                     <div class="quest-rewards">
-                        <span class="reward-label">Skills:</span>
+                        <span class="reward-label" data-i18n="quest.skills">Skills:</span>
                         <div class="reward-tags">
                             <span class="reward-tag">SailPoint ISC</span>
                             <span class="reward-tag">Cloud IAM</span>
@@ -358,7 +361,7 @@
 
                 <!-- Quest 2 - Holcim -->
                 <article class="quest-card">
-                    <div class="quest-status completed">Completed</div>
+                    <div class="quest-status completed" data-i18n="quest.completed">Completed</div>
                     <div class="quest-header">
                         <div class="quest-icon">
                             <i class="fas fa-chess-rook"></i>
@@ -368,14 +371,14 @@
                             <span class="quest-dates">Mar 2022 - Aug 2025</span>
                         </div>
                     </div>
-                    <h3 class="quest-title">The Guardian of the Lifecycle</h3>
-                    <p class="quest-description">
+                    <h3 class="quest-title" data-i18n="quest2.title">The Guardian of the Lifecycle</h3>
+                    <p class="quest-description" data-i18n="quest2.description">
                         Over three years defending the identity fortress: customizing SailPoint IIQ,
                         automating user lifecycle rituals with Python and AWS, managing cloud infrastructure,
                         and providing Level 3 support to the realm's defenders.
                     </p>
                     <div class="quest-rewards">
-                        <span class="reward-label">Skills:</span>
+                        <span class="reward-label" data-i18n="quest.skills">Skills:</span>
                         <div class="reward-tags">
                             <span class="reward-tag">SailPoint IIQ</span>
                             <span class="reward-tag">AWS</span>
@@ -387,7 +390,7 @@
 
                 <!-- Quest 3 - Deloitte -->
                 <article class="quest-card">
-                    <div class="quest-status completed">Completed</div>
+                    <div class="quest-status completed" data-i18n="quest.completed">Completed</div>
                     <div class="quest-header">
                         <div class="quest-icon">
                             <i class="fas fa-scroll"></i>
@@ -397,13 +400,13 @@
                             <span class="quest-dates">Jun 2021 - Mar 2022</span>
                         </div>
                     </div>
-                    <h3 class="quest-title">The Senior Consul of Identities</h3>
-                    <p class="quest-description">
+                    <h3 class="quest-title" data-i18n="quest3.title">The Senior Consul of Identities</h3>
+                    <p class="quest-description" data-i18n="quest3.description">
                         Ascending to senior rank, analyzing and implementing IGA enchantments with SailPoint IIQ,
                         and weaving Single Sign-On spells with Okta for various kingdoms.
                     </p>
                     <div class="quest-rewards">
-                        <span class="reward-label">Skills:</span>
+                        <span class="reward-label" data-i18n="quest.skills">Skills:</span>
                         <div class="reward-tags">
                             <span class="reward-tag">SailPoint IIQ</span>
                             <span class="reward-tag">Okta</span>
@@ -415,7 +418,7 @@
 
                 <!-- Quest 4 - Minsait -->
                 <article class="quest-card">
-                    <div class="quest-status completed">Completed</div>
+                    <div class="quest-status completed" data-i18n="quest.completed">Completed</div>
                     <div class="quest-header">
                         <div class="quest-icon">
                             <i class="fas fa-shield-alt"></i>
@@ -425,13 +428,13 @@
                             <span class="quest-dates">Nov 2018 - May 2021</span>
                         </div>
                     </div>
-                    <h3 class="quest-title">The Keeper of the Gates</h3>
-                    <p class="quest-description">
+                    <h3 class="quest-title" data-i18n="quest4.title">The Keeper of the Gates</h3>
+                    <p class="quest-description" data-i18n="quest4.description">
                         First steps into the realm of security: implementing access control barriers,
                         authentication wards, monitoring sacred applications, and conducting audit rituals.
                     </p>
                     <div class="quest-rewards">
-                        <span class="reward-label">Skills:</span>
+                        <span class="reward-label" data-i18n="quest.skills">Skills:</span>
                         <div class="reward-tags">
                             <span class="reward-tag">Access Control</span>
                             <span class="reward-tag">Authentication</span>
@@ -443,7 +446,7 @@
 
                 <!-- Quest 5 - Emergya -->
                 <article class="quest-card">
-                    <div class="quest-status completed">Completed</div>
+                    <div class="quest-status completed" data-i18n="quest.completed">Completed</div>
                     <div class="quest-header">
                         <div class="quest-icon">
                             <i class="fas fa-code"></i>
@@ -453,13 +456,13 @@
                             <span class="quest-dates">May 2018 - Sep 2018</span>
                         </div>
                     </div>
-                    <h3 class="quest-title">The Apprentice's Trial</h3>
-                    <p class="quest-description">
+                    <h3 class="quest-title" data-i18n="quest5.title">The Apprentice's Trial</h3>
+                    <p class="quest-description" data-i18n="quest5.description">
                         Beginning the journey as a Python craftsman, forging web applications
                         and services with Django in the workshops of Emergya.
                     </p>
                     <div class="quest-rewards">
-                        <span class="reward-label">Emergya · May 2018 - Sep 2018</span>
+                        <span class="reward-label" data-i18n="quest.skills">Skills:</span>
                         <div class="reward-tags">
                             <span class="reward-tag">Python</span>
                             <span class="reward-tag">Django</span>
@@ -476,12 +479,12 @@
         <div class="container">
             <div class="section-header">
                 <div class="header-decoration left"></div>
-                <h2 class="section-title">Establish Contact</h2>
+                <h2 class="section-title" data-i18n="section.contact">Establish Contact</h2>
                 <div class="header-decoration right"></div>
             </div>
 
             <div class="contact-content">
-                <p class="contact-intro">
+                <p class="contact-intro" data-i18n="contact.intro">
                     Do you have a quest that requires my skills? Do you wish to forge an alliance?<br>
                     Send a message and I shall respond when the stars align.
                 </p>
@@ -489,17 +492,17 @@
                 <div class="contact-grid">
                     <a href="mailto:alejandro7c@gmail.com" class="contact-card">
                         <i class="fas fa-envelope"></i>
-                        <span class="contact-label">Scroll</span>
+                        <span class="contact-label" data-i18n="contact.scroll">Scroll</span>
                         <span class="contact-value">alejandro7c@gmail.com</span>
                     </a>
                     <a href="https://www.linkedin.com/in/alejandro-suarez-lamadrid-iam" target="_blank" class="contact-card">
                         <i class="fab fa-linkedin"></i>
-                        <span class="contact-label">Guild</span>
+                        <span class="contact-label" data-i18n="contact.guild">Guild</span>
                         <span class="contact-value">LinkedIn</span>
                     </a>
                     <a href="https://github.com/alesuarezl" target="_blank" class="contact-card">
                         <i class="fab fa-github"></i>
-                        <span class="contact-label">Grimoire</span>
+                        <span class="contact-label" data-i18n="contact.grimoire">Grimoire</span>
                         <span class="contact-value">GitHub</span>
                     </a>
                 </div>
@@ -512,12 +515,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-emblem">⚔</div>
-                <p>&copy; 2026 Alejandro Suárez Lamadrid. All rights reserved.</p>
-                <p class="footer-quote">"Identity is the most valuable treasure in the digital realm"</p>
+                <p data-i18n="footer.rights">&copy; 2026 Alejandro Suárez Lamadrid. All rights reserved.</p>
+                <p class="footer-quote" data-i18n="footer.quote">"Identity is the most valuable treasure in the digital realm"</p>
             </div>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
