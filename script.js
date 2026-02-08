@@ -241,20 +241,6 @@ if (characterHeader && headerContent && window.innerWidth > 768) {
     });
 }
 
-// ============================================
-// Portrait Glow Effect on Hover
-// ============================================
-const portraitFrame = document.querySelector('.portrait-frame');
-
-if (portraitFrame) {
-    portraitFrame.addEventListener('mouseenter', function() {
-        this.style.boxShadow = '0 0 30px rgba(184, 134, 11, 0.3)';
-    });
-
-    portraitFrame.addEventListener('mouseleave', function() {
-        this.style.boxShadow = 'none';
-    });
-}
 
 // ============================================
 // Level Badge Pulse (muy sutil)
