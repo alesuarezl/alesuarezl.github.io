@@ -133,21 +133,6 @@ navStyle.textContent = `
 document.head.appendChild(navStyle);
 
 // ============================================
-// Attribute Hover Effect
-// ============================================
-document.querySelectorAll('.attribute').forEach(attr => {
-    attr.addEventListener('mouseenter', function() {
-        this.style.borderColor = 'var(--gold)';
-        this.style.transform = 'scale(1.02)';
-    });
-
-    attr.addEventListener('mouseleave', function() {
-        this.style.borderColor = 'var(--border-dark)';
-        this.style.transform = 'scale(1)';
-    });
-});
-
-// ============================================
 // Counter Animation for Stats
 // ============================================
 function animateValue(element, start, end, duration) {
@@ -220,51 +205,40 @@ document.querySelectorAll('.proficiency-block').forEach(block => {
 
 
 // ============================================
-// Parallax Effect for Header (sutil) - Solo en desktop
+// MTG Card - Flip, Foil & 3D Tilt Effect
 // ============================================
-const characterHeader = document.querySelector('.character-header');
-const headerContent = document.querySelector('.header-content');
+const mtgCard = document.getElementById('mtg-card');
 
-if (characterHeader && headerContent && window.innerWidth > 768) {
-    window.addEventListener('scroll', () => {
-        if (window.innerWidth > 768) {
-            const scrolled = window.pageYOffset;
-            const headerHeight = characterHeader.offsetHeight;
+if (mtgCard) {
+    mtgCard.addEventListener('mousemove', (e) => {
+        const rect = mtgCard.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
 
-            if (scrolled < headerHeight) {
-                const opacity = 1 - (scrolled / headerHeight) * 0.5;
-                const translateY = scrolled * 0.2;
-                headerContent.style.opacity = opacity;
-                headerContent.style.transform = `translateY(${translateY}px)`;
-            }
+        // Posición del brillo (glare) y del gradiente foil
+        mtgCard.style.setProperty('--mx', `${x * 100}%`);
+        mtgCard.style.setProperty('--my', `${y * 100}%`);
+        mtgCard.style.setProperty('--posx', `${50 + (x - 0.5) * 100}%`);
+
+        // Inclinación 3D sutil (el giro completo lo hace el flipper en CSS)
+        const rotateX = (0.5 - y) * 8;
+        const rotateY = (x - 0.5) * 8;
+        mtgCard.classList.add('foil-active');
+        mtgCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    mtgCard.addEventListener('mouseleave', () => {
+        mtgCard.classList.remove('foil-active');
+        mtgCard.style.transform = '';
+    });
+
+    // Click para voltear la carta (los enlaces del dorso no voltean)
+    mtgCard.addEventListener('click', (e) => {
+        if (!e.target.closest('a')) {
+            mtgCard.classList.toggle('flipped');
         }
     });
 }
-
-
-// ============================================
-// Level Badge Pulse (muy sutil)
-// ============================================
-const levelBadge = document.querySelector('.level-badge');
-
-if (levelBadge) {
-    setInterval(() => {
-        levelBadge.style.boxShadow = '0 0 15px rgba(139, 0, 0, 0.4)';
-        setTimeout(() => {
-            levelBadge.style.boxShadow = 'none';
-        }, 1500);
-    }, 4000);
-}
-
-// ============================================
-// Tooltip for Attributes
-// ============================================
-document.querySelectorAll('.attribute').forEach(attr => {
-    const fullName = attr.querySelector('.attr-full');
-    if (fullName) {
-        fullName.style.transition = 'opacity 0.3s ease';
-    }
-});
 
 // ============================================
 // Print Character Sheet (Easter Egg)

@@ -6,7 +6,7 @@
 const translations = {
     en: {
         // Navigation
-        'nav.characterSheet': 'Character Sheet',
+        'nav.characterSheet': 'Alejandro',
         'nav.background': 'Background',
         'nav.education': 'Education',
         'nav.proficiencies': 'Proficiencies',
@@ -19,8 +19,6 @@ const translations = {
         'header.class': 'Telecommunications + Cybersecurity Engineer',
         'header.specializationLabel': 'Specialization',
         'header.specialization': 'Identity & Access Management',
-        'header.alignmentLabel': 'Alignment',
-        'header.alignment': 'Lawful Neutral',
         'header.yearsLabel': 'Years in Industry',
         'header.techLabel': 'IAM Technologies',
         'header.viewQuests': 'View Quests',
@@ -30,13 +28,14 @@ const translations = {
         // Quest dates
         'quest.present': 'Present',
 
-        // Attributes
-        'attr.iam': 'Identity Mgmt',
-        'attr.iga': 'Governance',
-        'attr.sso': 'Single Sign-On',
-        'attr.aws': 'Cloud',
-        'attr.dev': 'Development',
-        'attr.sec': 'Security',
+        // MTG Card
+        'card.type': 'Legendary Creature — Identity Guardian',
+        'card.ability1': '<strong>Vigilance, hexproof</strong>',
+        'card.ability2': 'Whenever an identity enters the realm, you may automate its lifecycle.',
+        'card.flavor': '"None shall pass without proper authentication."',
+        'card.rarity': 'IAM · Mythic Rare',
+        'cardBack.title': 'Establish Contact',
+        'cardBack.quote': '"Identity is the most valuable treasure in the digital realm"',
 
         // Background Section
         'section.background': 'Background',
@@ -111,7 +110,7 @@ const translations = {
     },
     es: {
         // Navigation
-        'nav.characterSheet': 'Ficha de Personaje',
+        'nav.characterSheet': 'Alejandro',
         'nav.background': 'Trasfondo',
         'nav.education': 'Educación',
         'nav.proficiencies': 'Competencias',
@@ -124,8 +123,6 @@ const translations = {
         'header.class': 'Ingeniero de Telecomunicaciones + Ciberseguridad',
         'header.specializationLabel': 'Especialización',
         'header.specialization': 'Gestión de Identidades y Accesos',
-        'header.alignmentLabel': 'Alineamiento',
-        'header.alignment': 'Legal Neutral',
         'header.yearsLabel': 'Años en el Sector',
         'header.techLabel': 'Tecnologías IAM',
         'header.viewQuests': 'Ver Misiones',
@@ -135,13 +132,14 @@ const translations = {
         // Quest dates
         'quest.present': 'Actualidad',
 
-        // Attributes
-        'attr.iam': 'Gestión Id.',
-        'attr.iga': 'Gobernanza',
-        'attr.sso': 'Inicio Único',
-        'attr.aws': 'Cloud',
-        'attr.dev': 'Desarrollo',
-        'attr.sec': 'Seguridad',
+        // MTG Card
+        'card.type': 'Criatura Legendaria — Guardián de Identidades',
+        'card.ability1': '<strong>Vigilancia, antimaleficio</strong>',
+        'card.ability2': 'Siempre que una identidad entre al reino, puedes automatizar su ciclo de vida.',
+        'card.flavor': '"Nadie pasará sin la debida autenticación."',
+        'card.rarity': 'IAM · Rara Mítica',
+        'cardBack.title': 'Establecer Contacto',
+        'cardBack.quote': '"La identidad es el tesoro más valioso del reino digital"',
 
         // Background Section
         'section.background': 'Trasfondo',
@@ -241,7 +239,7 @@ function applyTranslations(lang) {
     document.documentElement.lang = lang;
 
     // Update page title
-    document.title = lang === 'es' ? 'Alejandro | Ficha de Personaje' : 'Alejandro | Character Sheet';
+    document.title = lang === 'es' ? 'Alejandro | Guardián de Identidades' : 'Alejandro | Identity Guardian';
 
     // Translate all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {

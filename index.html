@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro | Character Sheet</title>
+    <title>Alejandro | Identity Guardian</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         <div class="nav-container">
             <a href="#top" class="nav-logo">
                 <span class="logo-icon">⚔</span>
-                <span data-i18n="nav.characterSheet">Character Sheet</span>
+                <span data-i18n="nav.characterSheet">Alejandro</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="#background" class="nav-link" data-i18n="nav.background">Background</a></li>
@@ -42,50 +42,64 @@
         <div class="header-content">
             <div class="header-left">
                 <div class="character-portrait">
-                    <div class="portrait-frame">
-                        <div class="portrait-inner">
-                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKwbF4JM8LWU9DuLkeNrWaY5d_KeVwYHyz0zCXn7f9jSibGPBBZCg=s288-c-no" alt="Alejandro Suárez Lamadrid">
+                    <div class="mtg-card" id="mtg-card">
+                        <div class="mtg-flipper">
+                            <!-- Front face: the Magic card -->
+                            <div class="mtg-face mtg-card-front">
+                                <div class="mtg-card-inner">
+                                    <div class="mtg-titlebar">
+                                        <span class="mtg-name">ALEJANDRO</span>
+                                        <span class="mtg-mana">
+                                            <span class="mana mana-generic">6</span>
+                                            <span class="mana mana-violet"><i class="fas fa-key"></i></span>
+                                            <span class="mana mana-green"><i class="fas fa-shield-halved"></i></span>
+                                        </span>
+                                    </div>
+                                    <div class="mtg-art">
+                                        <img src="https://lh3.googleusercontent.com/a/ACg8ocKwbF4JM8LWU9DuLkeNrWaY5d_KeVwYHyz0zCXn7f9jSibGPBBZCg=s288-c-no" alt="Alejandro Suárez Lamadrid">
+                                    </div>
+                                    <div class="mtg-typeline">
+                                        <span data-i18n="card.type">Legendary Creature — Identity Guardian</span>
+                                        <span class="mtg-set-symbol">⚔</span>
+                                    </div>
+                                    <div class="mtg-textbox">
+                                        <p class="mtg-ability" data-i18n="card.ability1"><strong>Vigilance, hexproof</strong></p>
+                                        <p class="mtg-ability" data-i18n="card.ability2">Whenever an identity enters the realm, you may automate its lifecycle.</p>
+                                        <p class="mtg-flavor" data-i18n="card.flavor">"None shall pass without proper authentication."</p>
+                                    </div>
+                                    <div class="mtg-bottomline">
+                                        <span class="mtg-rarity" data-i18n="card.rarity">IAM · Mythic Rare</span>
+                                        <span class="mtg-pt">8/8</span>
+                                    </div>
+                                    <div class="mtg-foil"></div>
+                                    <div class="mtg-glare"></div>
+                                </div>
+                            </div>
+                            <!-- Back face: contact info -->
+                            <div class="mtg-face mtg-card-back">
+                                <div class="mtg-card-inner mtg-back-inner">
+                                    <div class="mtg-back-emblem">⚔</div>
+                                    <h3 class="mtg-back-title" data-i18n="cardBack.title">Establish Contact</h3>
+                                    <div class="mtg-back-links">
+                                        <a href="mailto:alejandro7c@gmail.com" class="mtg-back-link">
+                                            <i class="fas fa-envelope"></i>
+                                            <span>alejandro7c@gmail.com</span>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/alejandro-suarez-lamadrid-iam" target="_blank" class="mtg-back-link">
+                                            <i class="fab fa-linkedin"></i>
+                                            <span>alejandro-suarez-lamadrid-iam</span>
+                                        </a>
+                                        <a href="https://github.com/alesuarezl" target="_blank" class="mtg-back-link">
+                                            <i class="fab fa-github"></i>
+                                            <span>alesuarezl</span>
+                                        </a>
+                                    </div>
+                                    <p class="mtg-back-quote" data-i18n="cardBack.quote">"Identity is the most valuable treasure in the digital realm"</p>
+                                    <div class="mtg-foil"></div>
+                                    <div class="mtg-glare"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Skill Attributes next to portrait -->
-                <div class="header-attributes">
-                    <div class="attribute">
-                        <span class="attr-value">18</span>
-                        <span class="attr-modifier">+4</span>
-                        <span class="attr-name">IAM</span>
-                        <span class="attr-full">Identity Mgmt</span>
-                    </div>
-                    <div class="attribute">
-                        <span class="attr-value">17</span>
-                        <span class="attr-modifier">+3</span>
-                        <span class="attr-name">IGA</span>
-                        <span class="attr-full">Governance</span>
-                    </div>
-                    <div class="attribute">
-                        <span class="attr-value">16</span>
-                        <span class="attr-modifier">+3</span>
-                        <span class="attr-name">SSO</span>
-                        <span class="attr-full">Single Sign-On</span>
-                    </div>
-                    <div class="attribute">
-                        <span class="attr-value">16</span>
-                        <span class="attr-modifier">+3</span>
-                        <span class="attr-name">AWS</span>
-                        <span class="attr-full">Cloud</span>
-                    </div>
-                    <div class="attribute">
-                        <span class="attr-value">15</span>
-                        <span class="attr-modifier">+2</span>
-                        <span class="attr-name">DEV</span>
-                        <span class="attr-full">Development</span>
-                    </div>
-                    <div class="attribute">
-                        <span class="attr-value">15</span>
-                        <span class="attr-modifier">+2</span>
-                        <span class="attr-name">SEC</span>
-                        <span class="attr-full">Security</span>
                     </div>
                 </div>
             </div>
@@ -106,16 +120,12 @@
                         <span class="detail-label" data-i18n="header.specializationLabel">Specialization</span>
                         <span class="detail-value" data-i18n="header.specialization">Identity & Access Management</span>
                     </div>
-                    <div class="detail-row">
-                        <span class="detail-label" data-i18n="header.alignmentLabel">Alignment</span>
-                        <span class="detail-value" data-i18n="header.alignment">Lawful Neutral</span>
-                    </div>
                 </div>
 
                 <div class="header-stats">
                     <div class="header-stat">
                         <i class="fas fa-hourglass-half"></i>
-                        <span class="stat-value">7+</span>
+                        <span class="stat-value">8+</span>
                         <span class="stat-label" data-i18n="header.yearsLabel">Years in Industry</span>
                     </div>
                     <div class="header-stat">
