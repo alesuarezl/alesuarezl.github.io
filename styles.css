@@ -669,12 +669,9 @@ body {
     border: 1px solid var(--border-dark);
     border-left: 3px solid var(--green);
     transition: var(--transition);
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--green-light);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--text-light);
 }
 
 .current-role:hover {
