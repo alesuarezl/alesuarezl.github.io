@@ -86,7 +86,7 @@ body {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
 }
 
 /* Headers de sección con decoración */
@@ -225,11 +225,11 @@ body {
    Character Header - Cabecera de Ficha
    ============================================ */
 .character-header {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 6rem 2rem 3rem;
+    justify-content: flex-start;
+    padding: 7rem 2rem 4rem;
     background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
     position: relative;
     z-index: 2;
@@ -249,6 +249,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    margin-left: -2.5rem;
 }
 
 /* Portrait - Magic: The Gathering Card */
@@ -258,7 +259,7 @@ body {
 }
 
 .mtg-card {
-    width: 280px;
+    width: 340px;
     aspect-ratio: 63 / 88;
     position: relative;
     transform-style: preserve-3d;
@@ -338,7 +339,7 @@ body {
 
 .mtg-name {
     font-family: var(--font-heading);
-    font-size: 0.78rem;
+    font-size: 0.92rem;
     font-weight: 700;
     color: var(--parchment);
     letter-spacing: 0.02em;
@@ -354,20 +355,20 @@ body {
 }
 
 .mana {
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-heading);
-    font-size: 0.58rem;
+    font-size: 0.68rem;
     font-weight: 700;
     box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mana i {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .mana-generic {
@@ -388,6 +389,7 @@ body {
 /* Art */
 .mtg-art {
     flex: 0 0 41%;
+    position: relative;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 2px;
     overflow: hidden;
@@ -395,10 +397,24 @@ body {
 }
 
 .mtg-art img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
+}
+
+.mtg-art-backdrop {
+    object-fit: cover;
+    filter: blur(10px) brightness(0.75) saturate(1.1);
+    transform: scale(1.15);
+}
+
+.mtg-art-photo {
+    object-fit: contain;
+    object-position: center top;
+    transform: scale(1.25) translateY(-10%);
+    transform-origin: center top;
 }
 
 /* Type line */
@@ -410,9 +426,9 @@ body {
     background: linear-gradient(180deg, #2c2433, #1c1722);
     border: 1px solid rgba(155, 89, 182, 0.35);
     border-radius: 3px;
-    padding: 3px 7px;
+    padding: 4px 8px;
     font-family: var(--font-heading);
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: var(--parchment);
     letter-spacing: 0;
@@ -426,7 +442,7 @@ body {
 
 .mtg-set-symbol {
     color: var(--green);
-    font-size: 0.7rem;
+    font-size: 0.82rem;
     flex-shrink: 0;
 }
 
@@ -445,8 +461,8 @@ body {
 
 .mtg-ability {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    line-height: 1.35;
+    font-size: 0.82rem;
+    line-height: 1.4;
     color: var(--text-light);
 }
 
@@ -457,7 +473,7 @@ body {
 .mtg-flavor {
     font-family: var(--font-body);
     font-style: italic;
-    font-size: 0.66rem;
+    font-size: 0.76rem;
     line-height: 1.35;
     color: var(--text-muted);
     margin-top: auto;
@@ -476,7 +492,7 @@ body {
 
 .mtg-rarity {
     font-family: var(--font-heading);
-    font-size: 0.5rem;
+    font-size: 0.58rem;
     font-weight: 600;
     color: var(--text-faded);
     text-transform: uppercase;
@@ -485,7 +501,7 @@ body {
 
 .mtg-pt {
     font-family: var(--font-display);
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--parchment);
     background: linear-gradient(180deg, #2c2433, #1c1722);
     border: 1px solid rgba(46, 204, 113, 0.5);
@@ -550,7 +566,7 @@ body {
 }
 
 .mtg-back-emblem {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     color: var(--violet-light);
     text-shadow: 0 0 18px rgba(155, 89, 182, 0.6);
     line-height: 1;
@@ -558,7 +574,7 @@ body {
 
 .mtg-back-title {
     font-family: var(--font-heading);
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     font-weight: 700;
     color: var(--green);
     text-transform: uppercase;
@@ -584,7 +600,7 @@ body {
     color: var(--text-light);
     text-decoration: none;
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     transition: var(--transition);
 }
 
@@ -602,7 +618,7 @@ body {
 .mtg-back-quote {
     font-family: var(--font-body);
     font-style: italic;
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     line-height: 1.45;
     color: var(--text-muted);
 }
@@ -643,16 +659,88 @@ body {
     text-transform: uppercase;
 }
 
+.current-role {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.65rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-left: 3px solid var(--green);
+    transition: var(--transition);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--green-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.current-role:hover {
+    border-color: var(--border-gold);
+    border-left-color: var(--green);
+    background: var(--bg-card-hover);
+}
+
+.role-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes runeFloat {
+    0%   { opacity: 0; transform: translateY(0)                          translateX(0)                        scale(0.3); }
+    35%  { opacity: 1; transform: translateY(calc(var(--rise) * -0.3))  translateX(calc(var(--drift) * 0.3)) scale(1);   }
+    70%  { opacity: 1; transform: translateY(calc(var(--rise) * -0.7))  translateX(calc(var(--drift) * 0.7)) scale(1.02);}
+    100% { opacity: 0; transform: translateY(calc(var(--rise) * -1))    translateX(var(--drift))              scale(1.05);}
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.75); }
+}
+
 .character-details {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .detail-row {
     display: flex;
     gap: 1rem;
-    align-items: baseline;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-dark);
+    border-left: 3px solid var(--violet);
+    transition: var(--transition);
+}
+
+.detail-row:hover {
+    border-color: var(--border-gold);
+    border-left-color: var(--green);
+    background: var(--bg-card-hover);
+}
+
+.detail-row > i,
+.current-role > i {
+    font-size: 0.9rem;
+    width: 18px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.detail-row > i {
+    color: var(--violet-light);
+}
+
+.current-role > i {
+    color: var(--green);
 }
 
 .detail-label {
@@ -1503,6 +1591,7 @@ body {
         justify-content: center;
         gap: 1rem;
         order: 1;
+        margin-left: 0;
     }
 
     .character-portrait {
@@ -1515,6 +1604,10 @@ body {
 
     .detail-row {
         justify-content: center;
+    }
+
+    .detail-row .detail-label {
+        min-width: auto;
     }
 
     .header-actions {
@@ -1571,7 +1664,7 @@ body {
     }
 
     .mtg-card {
-        width: 240px;
+        width: 290px;
     }
 
     .section-title {

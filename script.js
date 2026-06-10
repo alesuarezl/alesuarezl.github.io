@@ -209,7 +209,61 @@ document.querySelectorAll('.proficiency-block').forEach(block => {
 // ============================================
 const mtgCard = document.getElementById('mtg-card');
 
+// Rune ambient animation
+const RUNES = ['ᛟ', '✦', '☽', '⊕', 'ᚦ', 'ᚲ', '✧', 'ᛉ', '✵', 'ᚹ', '⊛', '⟁', 'ᛞ', '᛫', '✴'];
+const RUNE_COLORS = [
+    { color: 'rgba(155,89,182,0.9)',  shadow: '0 0 8px rgba(155,89,182,1), 0 0 20px rgba(155,89,182,0.7)' },
+    { color: 'rgba(46,204,113,0.9)',  shadow: '0 0 8px rgba(46,204,113,1),  0 0 20px rgba(46,204,113,0.6)' },
+    { color: 'rgba(180,120,255,0.85)', shadow: '0 0 8px rgba(180,120,255,1), 0 0 18px rgba(155,89,182,0.6)' },
+    { color: 'rgba(80,220,140,0.85)', shadow: '0 0 8px rgba(80,220,140,1),  0 0 18px rgba(46,204,113,0.5)' },
+];
+let _runeTimer = null;
+
+function spawnCardRune() {
+    const portrait = mtgCard ? mtgCard.closest('.character-portrait') : null;
+    if (!portrait) return;
+    const w = portrait.offsetWidth;
+    const h = portrait.offsetHeight;
+    const el = document.createElement('span');
+    el.textContent = RUNES[Math.floor(Math.random() * RUNES.length)];
+    // Spawn along bottom edge and sides, not in the middle of the card
+    const zone = Math.random();
+    let x, y;
+    if (zone < 0.5) {
+        // bottom strip
+        x = (Math.random() * (w + 60)) - 30;
+        y = h * 0.75 + Math.random() * (h * 0.3);
+    } else if (zone < 0.75) {
+        // left side
+        x = -20 + Math.random() * 40;
+        y = h * 0.2 + Math.random() * (h * 0.7);
+    } else {
+        // right side
+        x = w - 20 + Math.random() * 40;
+        y = h * 0.2 + Math.random() * (h * 0.7);
+    }
+    const drift = (Math.random() - 0.5) * 60;
+    const rise  = 60 + Math.random() * 80;
+    const size  = 18 + Math.random() * 21;
+    const dur   = 3500 + Math.random() * 2500;
+    const col   = RUNE_COLORS[Math.floor(Math.random() * RUNE_COLORS.length)];
+    el.style.cssText = `
+        position: absolute; left: ${x}px; top: ${y}px;
+        font-size: ${size}px; color: ${col.color};
+        pointer-events: none; z-index: 2; user-select: none;
+        animation: runeFloat ${dur}ms ease-in-out forwards;
+        --drift: ${drift}px; --rise: ${rise}px;
+        text-shadow: ${col.shadow};
+    `;
+    portrait.appendChild(el);
+    setTimeout(() => el.remove(), dur + 50);
+}
+
 if (mtgCard) {
+    // Start rune ambient effect
+    spawnCardRune();
+    _runeTimer = setInterval(spawnCardRune, 290);
+
     mtgCard.addEventListener('mousemove', (e) => {
         const rect = mtgCard.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width;
