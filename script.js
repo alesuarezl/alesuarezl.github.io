@@ -269,16 +269,17 @@ if (mtgCard) {
         const x = (e.clientX - rect.left) / rect.width;
         const y = (e.clientY - rect.top) / rect.height;
 
-        // Posición del brillo (glare) y del gradiente foil
         mtgCard.style.setProperty('--mx', `${x * 100}%`);
         mtgCard.style.setProperty('--my', `${y * 100}%`);
         mtgCard.style.setProperty('--posx', `${50 + (x - 0.5) * 100}%`);
 
-        // Inclinación 3D sutil (el giro completo lo hace el flipper en CSS)
-        const rotateX = (0.5 - y) * 8;
-        const rotateY = (x - 0.5) * 8;
+        // No tilt when flipped — keeps back-face links stable
+        if (!mtgCard.classList.contains('flipped')) {
+            const rotateX = (0.5 - y) * 8;
+            const rotateY = (x - 0.5) * 8;
+            mtgCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        }
         mtgCard.classList.add('foil-active');
-        mtgCard.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
 
     mtgCard.addEventListener('mouseleave', () => {

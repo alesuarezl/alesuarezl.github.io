@@ -518,6 +518,7 @@ body {
     z-index: 5;
     border-radius: 8px;
     pointer-events: none;
+    pointer-events: none;
     opacity: 0;
     transition: opacity 0.4s ease;
     /* Sin esto, Chromium pinta las capas con blend-mode aunque su cara esté oculta tras el flip */
